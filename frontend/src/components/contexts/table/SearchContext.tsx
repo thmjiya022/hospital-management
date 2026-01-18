@@ -12,7 +12,7 @@ export interface SearchContextValueType extends ContextToggle {
 
 export const emptySearchContextValue = {
     isInUse: false,
-    searchTerm: { accessor: '', translationKey: '', value: '' },
+    searchTerm: { accessor: '', value: '' },
     searchDescriptor: new Array(0),
     updateSearchTerm: () => { },
     updateSearchColumn: () => { },
