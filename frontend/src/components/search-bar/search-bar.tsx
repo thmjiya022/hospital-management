@@ -1,13 +1,13 @@
 import { useState, type FC } from "react"
 import { useSearch } from "../contexts/table/SearchContext"
 
-type Props = {
+type searchBarProps = {
     setSearchTerm: (searchTerm: any) => void,
     setSearchColumn: (searhColumn: any) => void,
     cyName?: string
 }
 
-const SearchBar: FC<Props> = ({ setSearchTerm, setSearchColumn }) => {
+const SearchBar: FC<searchBarProps> = ({ setSearchTerm, setSearchColumn }) => {
     const [initialSelectValue, setInitialSelectValue] = useState<any>('');
     const searchContext = useSearch();
 
