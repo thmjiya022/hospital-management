@@ -21,4 +21,6 @@ CREATE INDEX idx_users_role ON users(role);
 
 -- Insert default admin user (password: admin123 - you'll hash this later)
 INSERT INTO users (id, email, password_hash, first_name, last_name, role, is_active, created_at)
+
+-- This is fake admim email, but I will keep it like this for now.
 VALUES (NEWID(), 'admin@hospital.com', '$2a$10$YourHashedPasswordHere', 'System', 'Admin', 'ADMIN', 1, GETDATE());
