@@ -33,7 +33,7 @@ public class UserDaoImpl extends AbstractBaseDaoImpl<User, UUID> implements User
             CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
             CriteriaQuery<User> query = criteriaBuilder.createQuery(User.class);
             Root<User> userRoot =  query.from(User.class);
-            query.select(userRoot).where(criteriaBuilder.equal(userRoot.get("emai"), email));
+            query.select(userRoot).where(criteriaBuilder.equal(userRoot.get("email"), email));
 
             User user = entityManager.createQuery(query).getSingleResult();
             return Optional.ofNullable(user);
