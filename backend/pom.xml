@@ -118,6 +118,18 @@
 					</excludes>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>me.fabriciorby</groupId>
+                <artifactId>dotenv-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>env</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
