@@ -32,10 +32,6 @@ public class RefreshTokenService {
     private final RefreshTokenDao refreshTokenDao;
     private final JwtProperties jwtProperties;
 
-    // -------------------------------------------------------------------------
-    // Issuance
-    // -------------------------------------------------------------------------
-
     /**
      * Issues a new refresh token for the given user.
      *
@@ -62,9 +58,6 @@ public class RefreshTokenService {
         return rawToken;
     }
 
-    // -------------------------------------------------------------------------
-    // Rotation
-    // -------------------------------------------------------------------------
 
     /**
      * Validates an incoming refresh token and rotates it.
@@ -94,10 +87,6 @@ public class RefreshTokenService {
         return issueRefreshToken(existing.getUserId(), deviceInfo, ipAddress);
     }
 
-    // -------------------------------------------------------------------------
-    // Revocation
-    // -------------------------------------------------------------------------
-
     /**
      * Revokes all refresh tokens for a user.
      * <p>
@@ -125,11 +114,7 @@ public class RefreshTokenService {
                 .orElseThrow(() -> new SecurityException("Refresh token is invalid or expired"))
                 .getUserId();
     }
-
-    // -------------------------------------------------------------------------
-    // Internal
-    // -------------------------------------------------------------------------
-
+    
     private String hash(String raw) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
