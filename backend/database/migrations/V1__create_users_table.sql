@@ -5,7 +5,7 @@ CREATE TABLE users (
     password_hash NVARCHAR(255) NOT NULL,
     first_name NVARCHAR(100) NOT NULL,
     last_name NVARCHAR(100) NOT NULL,
-    phone NVARCHAR(20)
+    phone NVARCHAR(20),
     role NVARCHAR(20) NOT NULL,
     department_id UNIQUEIDENTIFIER,
     is_active BIT NOT NULL DEFAULT 1,
