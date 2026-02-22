@@ -53,6 +53,7 @@ public class Department extends BaseEntity {
      * List of staff members associated with this department (e.g., doctors,nurses).
      * One department can have many users.
      */
-    @OneToMany(mappedBy = "department")
-    private List<User> staff = new ArrayList<>();
+     // TODO: LOOK AT THIS
+    // @OneToMany(mappedBy = "department")
+    // private List<User> staff = new ArrayList<>();
 }
